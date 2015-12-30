@@ -1,0 +1,34 @@
+{
+  "stories": [
+    {
+      "id": 1,
+      "Story": "Heading 1",
+      "StoryText": "<b>Syrian refugees: empathy wanes in US and UK as more voters say shut borders</b><br>Since Paris attacks, survey shows public opinion has hardened among American and Britons but Canadians soften stance – yet all agree on security checks"
+    },
+    {
+      "id": 2,
+      "Story": "Heading 2",
+      "StoryText": "The Russian defence ministry releases further footage purporting to show Russian ships in the Caspian sea launching cruise missiles, aimed at alleged Syrian militant positions. The Russian military has launched at least 101 cruise missiles in the past four days, 18 of which came from the Caspian sea fleet"
+    },
+    {
+      "id": 3,
+      "Story": "Heading 3",
+      "StoryText": "Don't ignore what could be the jolly season for stocks Stocks had their best week of the year and the upswing could continue into Thanksgiving week, usually a good one for the market."
+    },
+    {
+      "id": 4,
+      "Story": "Heading 4",
+      "StoryText": "The S&P 500 finished Friday up 3.3 percent at 2,089, its best weekly performance since October 2014, after logging a 3.6 percent decline the previous week. The Dow rose 3.4 percent, its best week in six."
+    },
+    {
+      "id": 5,
+      "Story": "Heading 5",
+      "StoryText": "A study released earlier this year found that we may soon see a mass extinction of ocean life."
+    },
+    {
+      "id": 6,
+      "Story": "Heading 6",
+      "StoryText": "That's alarming, since oceans comprise nearly 70 percent of Earth, provide habitat for more 200,000 known species"
+    }
+  ]
+}
