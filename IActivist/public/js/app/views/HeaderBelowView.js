@@ -9,7 +9,7 @@ function(App, Backbone, Marionette, Underscore, Handlebars, HeaderBelowModel, He
 				success: function(data)
 				{
 						var template = HeaderBelowTemplate;	
-						$("#headerBelowSection").append(template(data.toJSON()));			
+						$("#banner-text").append(template(data.toJSON()));			
 				}				
 			});
 		}		

@@ -5,7 +5,7 @@ function(App, Backbone, Marionette, Underscore, Handlebars, TopHeaderTemplate) {
 		render : function() {
 			
 			var template = TopHeaderTemplate;
-			$(".topHeaderSection").append(template);
+			$("#banner").append(template);
 
 		}
 	});
