@@ -1,5 +1,5 @@
-define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView', 'views/HeaderBelowView','views/TopHeaderView', 'views/TopBarView'],
-    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView, HeaderBelowView, TopHeaderView, TopBarView) {
+define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView', 'views/HeaderBelowView','views/TopHeaderView', 'views/TopBarView', 'views/FeaturedVideoView'],
+    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView, HeaderBelowView, TopHeaderView, TopBarView, FeaturedVideoView) {
     return Backbone.Marionette.Controller.extend({
         initialize:function (options) {
             //App.headerRegion.show(new DesktopHeaderView());
@@ -16,12 +16,10 @@ define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHead
             App.headerRegion.show(new TopHeaderView({el: '.topHeaderSection'}));            
             App.headerRegion.show(new HeaderBelowView({el: '#banner-text'}));   
             
-            App.extendedSections.show(new NewStoryView({el: '#p3-body'}));            
-            App.mainRegion.show(new WelcomeView());
+            App.mainRegion.show(new NewStoryView({el: '#p3-body'}));            
             
-            //
-            //App.mainRegion.show(new TopHeaderView({el: '.topHeaderSection'})); 
-               
+            App.extendedSections.show(new WelcomeView());
+            App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
                 
         }
     });
