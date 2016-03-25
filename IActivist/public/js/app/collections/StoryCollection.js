@@ -5,7 +5,7 @@ define(["jquery","backbone","models/StoryModel"],
       // Tells the Backbone Collection that all of it's models will be of type Model (listed up top as a dependency)
       model: Model,
 
-      url: 'http://localhost:61449/api/story',
+      url: 'http://saeedansari-001-site1.ctempurl.com/api/story',
      
     });
 

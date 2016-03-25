@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ProFlex Multi-Purpose Responsive Template</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="ProFlex Powerful MultiPurpose Html Template">
+		<meta name="author" content="ArtofThemes">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap -->
+		<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
+
+		<!-- Custom styles for this template -->
+		<link rel="stylesheet" type="text/css" href="css/navbar.css">
+		<link rel="stylesheet" type="text/css" href="css/color/blue.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/header-fullwidth.css">
+		<link rel="stylesheet" type="text/css" href="css/tools.css">
+		<link rel="stylesheet" type="text/css" href="css/footer-dark.css">
+		<link rel="stylesheet" type="text/css" href="css/socialmediaicons.css">
+		<link rel="stylesheet" type="text/css" href="css/responsive.css">
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+		<link rel="stylesheet" type="text/css" href="css/CustomStyle/style.css">
+		<link rel="stylesheet" type="text/css" href="css/CustomStyle/responsive.css">
+		<link rel="stylesheet" type="text/css" href="css/dropzone.css">
+
+		<!-- MegaMenu styles-->
+		<link href="css/megamenu.css" rel="stylesheet">
+
+		<!-- Font Awesome -->
+		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 7]><script src="js/socialmediaicons-lte-ie7.js"></script><![endif]-->
+
+		<!-- LOAD JQUERY LIBRARY -->
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+		<!-- MEGAFOLIO PRO GALLERY CSS SETTINGS -->
+		<link rel="stylesheet" type="text/css" href="megafolio/css/settings.css" media="screen" />
+
+		<!-- MEGAFOLIO PRO GALLERY JS FILES  -->
+		<!--<script type="text/javascript" src="megafolio/js/jquery.themepunch.plugins.min.js"></script>-->
+		<!--<script type="text/javascript" src="megafolio/js/jquery.themepunch.megafoliopro.js"></script>-->
+
+		<!-- THE FANYCYBOX ASSETS -->
+		<link rel="stylesheet" href="megafolio/fancybox/jquery.fancybox.css?v=2.1.3" type="text/css" media="screen" />
+		<!--<script type="text/javascript" src="megafolio/fancybox/jquery.fancybox.pack.js?v=2.1.3"></script>-->
+
+		<!-- Favicons -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+
+		<!-- For Sticky Header -->
+		<script type="text/javascript" src="js/custom.js"></script>
+
+		<!-- for Animation Elements -->
+		<script src="js/wow.js"></script>
+
+		<script>
+			// Mobile/Desktop Detection script
+			(function(ua, w, d, undefined) {
+
+				// App Environment
+				// ---------------
+				//  Tip: Set to true to turn on "production" mode
+				var production = true,
+				    filesToLoad,
+				//BoilerplateMVC Helper Methods
+				    boilerplateMVC = {
+					loadCSS : function(url, callback) {
+						var link = d.createElement("link");
+						link.type = "text/css";
+						link.rel = "stylesheet";
+						link.href = url;
+						d.getElementsByTagName("head")[0].appendChild(link);
+						if (callback) {
+							callback();
+						}
+					},
+					loadJS : function(file, callback) {
+						var script = d.createElement("script");
+						script.type = "text/javascript";
+						if (script.readyState) {// IE
+							script.onreadystatechange = function() {
+								if (script.readyState == "loaded" || script.readyState == "complete") {
+									script.onreadystatechange = null;
+									callback();
+								}
+							};
+						} else {// Other Browsers
+							script.onload = function() {
+								callback();
+							};
+						}
+						if ((( typeof file).toLowerCase()) === "object" && file["data-main"] !== undefined) {
+							script.setAttribute("data-main", file["data-main"]);
+							script.async = true;
+							script.src = file.src;
+						} else {
+							script.src = file;
+						}
+						d.getElementsByTagName("head")[0].appendChild(script);
+					},
+					loadFiles : function(production, obj, callback) {
+						var self = this;
+						if (production) {
+							// Loads the production CSS file(s)
+							self.loadCSS(obj["prod-css"], function() {
+								// If there are production JavaScript files to load
+								if (obj["prod-js"]) {
+									// Loads the correct initialization file (which includes Almond.js)
+									self.loadJS(obj["prod-js"], callback);
+								}
+							});
+						} else {
+							// Loads the development CSS file(s)
+							self.loadCSS(obj["dev-css"], function() {
+								// If there are development Javascript files to load
+								if (obj["dev-js"]) {
+									// Loads Require.js and tells Require.js to find the correct intialization file
+									self.loadJS(obj["dev-js"], callback);
+								}
+							});
+						}
+					}
+				};
+
+				// Mobile/Tablet Logic
+				if ((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua)) {
+
+					// Mobile/Tablet CSS and JavaScript files to load
+					filesToLoad = {
+						// CSS file that is loaded when in development mode
+						"dev-css" : "css/mobile.css",
+						// CSS file that is loaded when in production mode
+						"prod-css" : "css/mobile.min.css",
+						// Require.js configuration file that is loaded when in development mode
+						"dev-js" : {
+							"data-main" : "js/app/config/config.js",
+							"src" : "js/libs/require.js"
+						},
+						// JavaScript initialization file that is also loaded when in development mode
+						"dev-init" : "js/app/init/MobileInit.js",
+						// JavaScript file that is loaded when in production mode
+						"prod-init" : "js/app/init/MobileInit.min.js",
+						"prod-js" : {
+							"data-main" : "js/app/config/config.js",
+							"src" : "js/libs/require.js"
+						}
+					};
+
+				}
+
+				// Desktop Logic
+				else {
+
+					// Desktop CSS and JavaScript files to load
+					filesToLoad = {
+						// CSS file that is loaded when in development mode
+						"dev-css" : "css/desktop.css",
+						// CSS file that is loaded when in production mode
+						"prod-css" : "css/desktop.css",
+						// Require.js configuration file that is also loaded when in development mode
+						"dev-js" : {
+							"data-main" : "js/app/config/config.js",
+							"src" : "js/libs/require.js"
+						},
+						// JavaScript initialization file that is loaded when in development mode
+						"dev-init" : "js/app/init/DesktopInit.js",
+						// JavaScript file that is loaded when in production mode
+						"prod-init" : "js/app/init/DesktopInit.js",
+						"prod-js" : {
+							"data-main" : "js/app/config/config.js",
+							"src" : "js/libs/require.js"
+						}
+					};
+
+				}
+
+				boilerplateMVC.loadFiles(production, filesToLoad, function() {
+					if (!production && window.require) {
+						require([filesToLoad["dev-init"]]);
+					} else if (production) {
+						require([filesToLoad["prod-init"]])
+					}
+				});
+
+			})(navigator.userAgent || navigator.vendor || window.opera, window, document);
+
+		</script>
+
+	</head>
+	<body>
+		<!-- Main start -->
+		<div class="main" role="main">
+
+			<section id="navigation">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="logo-3">
+								<a href="#"><img src="img/logo.png" alt="" /></a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="img-video text-center">
+								<a href="#"><i class="fa fa-camera-retro"></i> Images</a>
+								<a href="#"><i class="fa fa-video-camera"></i> video</a>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="social text-right">
+								<ul>
+									<li>
+										<a href="#"><img src="img/h-social-icon.png" alt="" /></a>
+									</li>
+									<li>
+										<a href="#"><img src="img/h-social-icon2.png" alt="" /></a>
+									</li>
+									<li>
+										<a href="#"> <span>Smo hammoudou</span> <img src="img/user-img.png" alt="" /></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Content start -->
+
+			<!-- Metro Style Grid Portfolio Start -->
+
+			<!-- THE FILTER STYLED FOR MEGAFOLIO -->
+			<section>
+				<div class="topHeaderSection"> </div>
+
+				<div id="headerBelowSection"></div>		
+				
+				<div class="newStorySection"> </div>		
+			</section>
+			
+			<section>
+						
+			</section>
+			
+			<section id="p3-body">
+				<div class="container ">					
+					
+					<div class="filter_padder" >
+					<div class="filter_wrapper" style="max-width:540px;">
+					<div class="filter selected" data-category="cat-all">
+					ALL
+					</div>
+					<div class="filter" data-category="cat-one">
+					ELEGANT
+					</div>
+					<div class="filter" data-category="cat-two">
+					POWERFUL
+					</div>
+					<div class="filter" data-category="cat-three">
+					FLEXIBLE
+					</div>
+					<div class="filter last-child" data-category="cat-four">
+					RESPONSIVE
+					</div>
+					<div class="clear"></div>
+					</div>
+					</div>
+					<div class="clear"></div>
+					
+					<div class="container-megafolio">
+
+						<!-- The GRID System -->
+						<div class="megafolio-container noborder norounded dark-bg-entries">
+
+							<!-- A GALLERY ENTRY -->
+
+							<!-- Trial Starts here -->
+
+							<!-- Trial ends here -->
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- Metro Style Grid Portfolio End -->
+
+		</div><!-- Content end -->
+		</div>
+		<!-- Main end -->
+		<!-- MainBottom start
+		<div class="row mainbottom">
+		<div class="container top20">
+
+		<div class="col-md-3 col-sm-6 bottom-box1">
+		<h4 class="module-title2">About Us </h4>
+		<p><img alt="" src="images/logo-light.png">
+		</p>
+		<p>
+		Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation laboris.
+		</p>
+		</div>
+
+		<div class="col-md-3 col-sm-6 bottom-box3">
+		<h4 class="module-title2">Latest News</h4>
+		<ul class="latest-news">
+		<li><img src="images/pic01.jpg" width="45" height="45" class="pull-left img-circle img-responsive right-space-for-image" alt=""><a href="#">Aliquam consectetur elit feugiat <span>November 27, 2019</span></a>
+		</li>
+		<li><img src="images/pic02.jpg" width="45" height="45" class="pull-left img-circle img-responsive right-space-for-image" alt=""><a href="#">Nunc ornare auctor <span>November 26, 2019</span></a>
+		</li>
+		<li><img src="images/pic03.jpg" width="45" height="45" class="pull-left img-circle img-responsive right-space-for-image" alt=""><a href="#">Cras vestibulum auctor urna <span>November 25, 2019</span></a>
+		</li>
+		</ul>
+		</div>
+
+		<div class="col-md-3 col-sm-6 bottom-box4 links">
+		<h4 class="module-title2">Quick Links</h4>
+
+		<ul class="link-list-1">
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>Home</a>
+		</li>
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>About Us</a>
+		</li>
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>Services</a>
+		</li>
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>Projects</a>
+		</li>
+		</ul>
+		<ul class="link-list-2">
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>Features</a>
+		</li>
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>Support Team</a>
+		</li>
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>Blog</a>
+		</li>
+		<li>
+		<a href="#"><i class="fa fa-angle-double-right"></i>Contact Us</a>
+		</li>
+		</ul>
+
+		</div>
+
+		<div class="col-md-3 col-sm-6 bottom-box2">
+		<h4 class="module-title2">Contact</h4>
+		<p>
+		<i class="fa fa-map-marker"></i>795 Folsom Ave, San Francisco, CA
+		</p>
+
+		<p>
+		<i class="fa fa-phone"></i> (123) 456-7890
+		</p>
+
+		<p>
+		<i class="fa fa-fax"></i> (123) 456-7890
+		</p>
+
+		<p>
+		<i class="fa fa-envelope-o"></i><a href="mailto:#"> first.last@example.com</a>
+		</p>
+		</div>
+		</div>
+		</div>
+		<!-- MainBottom end -->
+		<!-- Footer start -->
+		<div class="row footer">
+			<div class="container">
+				<div class="col-md-6 col-sm-6 col-xs-4">
+					<p class="copyright">
+						Copyright © ProFlex
+					</p>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-8">
+					<ul class="nav nav-pills pull-right">
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Footer end -->
+
+		<!-- scroll-to-top start -->
+		<span id="scroll-to-top"> <a class="scroll-up"> <span class="glyphicon glyphicon-chevron-up"></span> </a> </span>
+		<!-- scroll-to-top end -->
+
+		<!--
+		##############################
+		- Megafolio Metro Style Start -
+		##############################
+		-->
+		<script type="text/javascript">
+			/*jQuery(document).ready(function() {
+
+			 var api = jQuery('.megafolio-container').megafoliopro({
+			 filterChangeAnimation : "pagebottom", // fade, rotate, scale, rotatescale, pagetop, pagebottom,pagemiddle
+			 filterChangeSpeed : 400, // Speed of Transition
+			 filterChangeRotate : 99, // If you ue scalerotate or rotate you can set the rotation (99 = random !!)
+			 filterChangeScale : 0.6, // Scale Animation Endparameter
+			 delay : 20,
+			 defaultWidth : 980,
+			 paddingHorizontal : 10,
+			 paddingVertical : 10,
+			 layoutarray : [9, 11, 5, 3, 7, 12, 4, 6, 13]	// Defines the Layout Types which can be used in the Gallery. 2-9 or "random". You can define more than one, like {5,2,6,4} where the first items will be orderd in layout 5, the next comming items in layout 2, the next comming items in layout 6 etc... You can use also simple {9} then all item ordered in Layout 9 type.
+			 });
+
+			 // FANCY BOX ( LIVE BOX) WITH MEDIA SUPPORT
+			 jQuery(".fancybox").fancybox();
+
+			 // THE FILTER FUNCTION
+			 jQuery('.filter').click(function() {
+			 jQuery('.filter').each(function() {
+			 jQuery(this).removeClass("selected")
+			 });
+			 api.megafilter(jQuery(this).data('category'));
+			 jQuery(this).addClass("selected");
+			 });
+
+			 });*/
+
+		</script>
+
+		<!--
+		##############################
+		- Megafolio Metro Style End -
+		##############################
+		-->
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster-->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- for Mega Menu -->
+		<script src="js/for_megamenu_run_prettify.js"></script>
+
+		<!-- for Retina Graphics -->
+		<script type="text/javascript" src="js/retina.js"></script>
+	</body>
+</html>
