@@ -12,6 +12,9 @@
 	margin:0 auto;
 }
 
+.removeMobile{
+    display: none;
+}
 .gallery-text {
     width: 40%;
     float: right;

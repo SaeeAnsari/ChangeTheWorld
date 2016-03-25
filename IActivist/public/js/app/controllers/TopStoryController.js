@@ -16,7 +16,7 @@ define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHead
             App.headerRegion.show(new TopHeaderView({el: '.topHeaderSection'}));            
             App.headerRegion.show(new HeaderBelowView({el: '#banner-text'}));   
             
-            App.mainRegion.show(new NewStoryView({el: '#p3-body'}));            
+            App.extendedSections.show(new NewStoryView({el: '#p3-body'}));            
             App.mainRegion.show(new WelcomeView());
             
             //
