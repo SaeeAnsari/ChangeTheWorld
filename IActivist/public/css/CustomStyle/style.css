@@ -303,7 +303,7 @@ background:#a9b6bd;
 }
 .post{
 	background:#fff;
-	border-radius:10px;
+	border-radius:8px;
 	padding: 0 20px;
 	width: 500px;
 	margin: 0 auto;
@@ -319,28 +319,35 @@ background:#a9b6bd;
 .post-body{
 	text-align: left;
 	overflow:hidden;
-	height:70px;
+    min-height: 70px;	
 }
 .post-img{
-	width: 5%;
-	float: left;
-	margin-top: 25px;
+	width: 10%;
+	float: left;	
+    margin-top: 15px;  
+}
+.post-camera{
+    float: left;
+    margin-top: 20px;    
+    width:10%;
 }
 .post-body img{
 	float: left;
 	margin-right: 5px;
 }
 .post-text{
-	width:95%;
-	float:right;
-	margin-top: 25px;
+	width:80%;
+	float:left;
+	margin-top: 5px;    
 }
+
 .post-body p{
 	font-size:14px;
 	color:#a7a7a7;
 	margin-top: 5px;
 	margin-left: 10px;
 }
+
 .post-button{
 	border-top:1px solid #a7a7a7;
 	padding: 5px 0;

@@ -20,6 +20,7 @@ require.config({
         "ThemeBunchPlugin": "../libs/megafolio/js/jquery.themepunch.plugins.min",
         "fancybox": "../libs/megafolio/fancybox/jquery.fancybox.pack",
         "dropzonejs" : "../libs/dropzone-amd-module",
+        "select2" : "../libs/select2.full.min",
         
 
         // Plugins
