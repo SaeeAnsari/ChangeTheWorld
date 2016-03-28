@@ -21,7 +21,7 @@ define(["jquery", "backbone",'underscore'], function($, Backbone, Underscore) {
 		},
         url: function()
         {
-            return "http://localhost:49520/api/story";
+            return "http://saeedansari-001-site1.ctempurl.com/api/story";
         },
         AddStory: function(){
             
