@@ -1,20 +1,28 @@
-define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView'],
-    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView) {
+define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView', 'views/HeaderBelowView','views/TopHeaderView', 'views/TopBarView', 'views/FeaturedVideoView'],
+    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView, HeaderBelowView, TopHeaderView, TopBarView, FeaturedVideoView) {
     return Backbone.Marionette.Controller.extend({
         initialize:function (options) {
             //App.headerRegion.show(new DesktopHeaderView());
         },
         //gets mapped to in AppRouter's appRoutes
         index:function () {
-        	var view = new WelcomeView({el:'#main'});
+        	//var view = new WelcomeView({el:'#main'});
         	//var viewNew = new NewStoryView({el: '.newStorySection'});
         	
         	
         	//view.render();
-            App.mainRegion.show(new WelcomeView());
-            App.mainRegion.show(new NewStoryView({el: '.newStorySection'}));
+        	
+            App.headerRegion.show(new TopBarView());
+            App.headerRegion.show(new TopHeaderView({el: '.topHeaderSection'}));            
+            App.headerRegion.show(new HeaderBelowView({el: '#banner-text'}));   
             
+            App.mainRegion.show(new NewStoryView({el: '#p3-body'}));            
             
+            App.extendedSections.show(new WelcomeView());
+            App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
+                
         }
     });
 });
+
+//New Story Template is not working!!!!!!!!!!
