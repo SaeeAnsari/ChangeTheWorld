@@ -1,13 +1,19 @@
-define(['App', 'backbone', 'marionette', 'underscore', 'handlebars', 'models/Model', 'hbs!templates/StoryBoxContainer','hbs!templates/StoryBox', 'models/StoryModel', 'collections/StoryCollection','megafolio','ThemeBunchPlugin', 'fancybox'], 
+define(['App', 'backbone', 'marionette', 'underscore', 'handlebars', 'models/Model', 'hbs!templates/StoryBoxContainer','hbs!templates/StoryBox', 'models/StoryModel', 'collections/StoryCollection','megafolio','ThemeBunchPlugin', 'fancybox', 'avgrund'], 
 function(App, Backbone, Marionette, Underscore, Handlebars, Model, templateStoryBoxContainer, templateTopStory, StoryModel, StoryCollection,MegaFolio) {
 	//ItemView provides some default rendering logic
-	return Backbone.Marionette.ItemView.extend({
+	return Backbone.Marionette.View.extend({
 		template2 : templateTopStory,
 		model : new StoryModel(),
-
+		
 		// View Event Handlers
 		events : {
-		},
+            "click .clickme" : "doPop"
+		},       
+        doPop : function(){
+          alert('here');  
+        },
+        
+       
 		render : function() {
 
 			this.collection = new StoryCollection();
