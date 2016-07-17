@@ -581,7 +581,7 @@ background:#a9b6bd;
 	height:80px;
 }
 #p2-body{
-	background:#f6f6f6;
+	/*background:#f6f6f6;*/
 	padding: 10px 0;
 }
 .logo-2 a{
@@ -696,8 +696,27 @@ background:#a9b6bd;
 	margin-right: 5px;
 }
 .like p a{
-color: #BEBABB;
+    color: #BEBABB;
 }
+.like div{
+    display:inline;
+    padding:5px;
+    font-size: 12pt;
+    font-weight:bold;   
+}
+
+.like .StoryTotalActionSummary{
+    display:inline;
+    padding:10px;
+    font-size: 16pt;
+    font-weight:bold;  
+    float: left;
+}
+
+.like .StoryActionSummary{
+    float: right;
+}
+
 .like p a:hover{
 
 }
@@ -813,4 +832,29 @@ text-align: center;
 .messages-body a i:hover{
 color:#15ee9f;
 transition:.5s;
+}
+
+/***** MY custom **/
+.foot{
+  
+    /*position: absolute;
+    color: black;
+    bottom: 0;*/
+    
+    position: fixed;
+    z-index: 100; 
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+   
+    background-color: white;
+    
+    
+    
+    
+
+}
+
+.container {
+    position: relative;
 }
