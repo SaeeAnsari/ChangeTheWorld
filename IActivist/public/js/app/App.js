@@ -12,7 +12,8 @@ define(['jquery','backbone', 'marionette', 'underscore', 'handlebars'],
         App.addRegions({
             headerRegion:"header",
             mainRegion:"Content",
-            extendedSections:"Extended"
+            extendedSections:"Extended",
+            modalRegion: "StoryModal"
         });
 
         App.addInitializer(function () {

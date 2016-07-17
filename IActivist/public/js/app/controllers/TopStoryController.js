@@ -1,5 +1,5 @@
-define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView', 'views/HeaderBelowView','views/TopHeaderView', 'views/TopBarView', 'views/FeaturedVideoView'],
-    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView, HeaderBelowView, TopHeaderView, TopBarView, FeaturedVideoView) {
+define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView', 'views/HeaderBelowView','views/TopHeaderView', 'views/TopBarView', 'views/FeaturedVideoView','views/StoryViewMasterView'],
+    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView, HeaderBelowView, TopHeaderView, TopBarView, FeaturedVideoView ,StoryMasterView) {
     return Backbone.Marionette.Controller.extend({
         initialize:function (options) {
             //App.headerRegion.show(new DesktopHeaderView());
@@ -12,15 +12,23 @@ define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHead
         	
         	//view.render();
         	
+            //-- MAIN PAGE --//
             App.headerRegion.show(new TopBarView());
             App.headerRegion.show(new TopHeaderView({el: '.topHeaderSection'}));            
-            App.headerRegion.show(new HeaderBelowView({el: '#banner-text'}));   
+            App.headerRegion.show(new HeaderBelowView({el: '#banner-text'}));    
             
             App.mainRegion.show(new NewStoryView({el: '#p3-body'}));            
+           
+            App.extendedSections.show(new WelcomeView({el : '.megafolio-container'}));
+            //App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
             
-            App.extendedSections.show(new WelcomeView());
-            App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
-                
+            //-- MAIN PAGE END --//
+        
+            
+          /*  var storyMasterContainer = new StoryMasterView()
+            App.headerRegion.show(storyMasterContainer);
+          */
+        
         }
     });
 });

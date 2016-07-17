@@ -12,12 +12,6 @@
 			<!--Bootstarp-->
 		<link href="css/CustomStyle/bootstrap.min.css" rel="stylesheet" />
 
-        <!-- Modal -->
-        
-        <link href="css/CustomStyle/backbone.modal.theme.css" rel="stylesheet" />
-        <link href="css/CustomStyle/backbone.modal.css" rel="stylesheet" />
-        
-        
 			<!--My Style-->
 		
 		<link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>	
@@ -148,9 +142,9 @@
 							"src" : "js/libs/require.js"
 						},
 						// JavaScript initialization file that is also loaded when in development mode
-						"dev-init" : "js/app/init/MobileInit.js",
+						"dev-init" : "js/app/init/StoryInit.js",
 						// JavaScript file that is loaded when in production mode
-						"prod-init" : "js/app/init/MobileInit.min.js",
+						"prod-init" : "js/app/init/StoryInit.js",
 						"prod-js" : {
 							"data-main" : "js/app/config/config.js",
 							"src" : "js/libs/require.js"
@@ -174,9 +168,9 @@
 							"src" : "js/libs/require.js"
 						},
 						// JavaScript initialization file that is loaded when in development mode
-						"dev-init" : "js/app/init/DesktopInit.js",
+						"dev-init" : "js/app/init/StoryInit.js",
 						// JavaScript file that is loaded when in production mode
-						"prod-init" : "js/app/init/DesktopInit.js",
+						"prod-init" : "js/app/init/StoryInit.js",
 						"prod-js" : {
 							"data-main" : "js/app/config/config.js",
 							"src" : "js/libs/require.js"
@@ -199,90 +193,115 @@
     
 			
 	</head>
-	<body>
+	<body style="background:#fff">
         
-        <div id="header">
-            <section id="navigation"></section>
-            <section id="banner" class="removeMobile"></section>                
-        </div>
         
-        <section id="Content">
-            <section id="banner-text"  class="removeMobile"></section>
-           <section id="p3-body"></section>            
-        </section>
-        
-        <section id="StoryContent">
-            <section id="StoryView"></section>
-        </section>
-        
-        <div id="Extended">            
-            <section id="Gallery">
-                <div class="row">
-                    
-                    <!-- This is where we insert the stories-->
-                    <div class="container-megafolio">
-                        <div class="megafolio-container">
+        <div id="Main-Section"><!--Start Main-Section-->			
+			
+			<section id="p2-body">
+				<div class="container">
+					
+					<div class="row">
+                         <section id="Content">
+                            <div id="StoryView"></div>
+                        </section>
 
-                        </div>
-                                
-                        
-                        
-                        
-                        <!-- Modal Section-->
-                        <script type="text/template" id="modal-template">
-                        <div class="bbm-modal__topbar">
-                          <h3 class="bbm-modal__title">Backbone.Modal</h3>
-                        </div>
-                        <div id="StoryContentModal" class="bbm-modal__section">
-                          
-                        </div>
-                        <div class="bbm-modal__bottombar">
-                          <a href="#" class="bbm-button">close</a>
-                        </div>
-                      </script>
-                        
-                        <div class="app"></div>
-                        
-                        <!-- Modal Section End --> 
-                    </div>
-                    
-                </div>
-            </section>
-            
-            <section id="Video"></section>
-            
-            <section id="messages">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="messages-body">
-                                <i class="fa fa-pencil-square-o fa-3x"></i>
-                                <a href="#"><i class="fa fa-search"></i></a>
-                                <a href="#"><i class="fa fa-comments"></i></i></a>
-                                <a href="#"><i class="fa fa-bell-o"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-            <section id="StoryModal">
-                I am Here
-            </section>
-        </div>
-        <!--
-		##############################
-		- Megafolio Metro Style End -
-		##############################
-		-->
+						
+						<div class="col-md-6">
+                            <div id="dvCommentTextBox"></div>
+                            <div id="dvEnterComment"></div>
+                            <div id="dvCommentView"></div>
+                            
+                            <!--
+							<div class="upload-info PostCommentInfo">
+								<div class="uploader-img PostCommentInfoImg">
+									<img src="img/p2/bg.jpg" alt="image" />
+								</div>
+								<div class="uploader-info PostCommenterInfo">
+									<h1>Humanity in 2016</h1>
+									<h2>Simo hammoudou</h2>
+									<h2 class="like PostCommenterInfoLike">
+										<p>123 
+											<a href="#"><i class="fa fa-thumbs-up"></i></a>
+											<a href="#"><i class="fa fa-thumbs-down"></i></a>
+										</p>
+									</h2>
+								</div>
+							</div>
+							<div class="upload-info PostCommentInfo">
+								<div class="uploader-img PostCommentInfoImg">
+									<img src="img/p2/bg.jpg" alt="image" />
+								</div>
+								<div class="uploader-info PostCommenterInfo">
+									<h1>Humanity in 2016</h1>
+									<h2>Simo hammoudou</h2>
+									<h2 class="like PostCommenterInfoLike">
+										<p>123 
+											<a href="#"><i class="fa fa-thumbs-up"></i></a>
+											<a href="#"><i class="fa fa-thumbs-down"></i></a>
+										</p>
+									</h2>
+								</div>
+							</div>
+							<div class="upload-info PostCommentInfo">
+								<div class="uploader-img PostCommentInfoImg">
+									<img src="img/p2/bg.jpg" alt="image" />
+								</div>
+								<div class="uploader-info PostCommenterInfo">
+									<h1>Humanity in 2016</h1>
+									<h2>Simo hammoudou</h2>
+									<h2 class="like PostCommenterInfoLike">
+										<p>123 
+											<a href="#"><i class="fa fa-thumbs-up"></i></a>
+											<a href="#"><i class="fa fa-thumbs-down"></i></a>
+										</p>
+									</h2>
+								</div>
+							</div>
+							<div class="upload-info PostCommentInfo">
+								<div class="uploader-img PostCommentInfoImg">
+									<img src="img/p2/bg.jpg" alt="image" />
+								</div>
+								<div class="uploader-info PostCommenterInfo">
+									<h1>Humanity in 2016</h1>
+									<h2>Simo hammoudou</h2>
+									<h2 class="like PostCommenterInfoLike">
+										<p>123 
+											<a href="#"><i class="fa fa-thumbs-up"></i></a>
+											<a href="#"><i class="fa fa-thumbs-down"></i></a>
+										</p>
+									</h2>
+								</div>
+							</div>
+							<div class="upload-info PostCommentInfo">
+								<div class="uploader-img PostCommentInfoImg">
+									<img src="img/p2/bg.jpg" alt="image" />
+								</div>
+								<div class="uploader-info PostCommenterInfo">
+									<h1>Humanity in 2016</h1>
+									<h2>Simo hammoudou</h2>
+									<h2 class="like PostCommenterInfoLike">
+										<p>123 
+											<a href="#"><i class="fa fa-thumbs-up"></i></a>
+											<a href="#"><i class="fa fa-thumbs-down"></i></a>
+										</p>
+									</h2>
+								</div>
+							</div>
+-->
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div> <!--Ending main section-->
+		
+		
 
 		<!-- Bootstrap core JavaScript
 		================================================== -->
 		<!-- Placed at the end of the document so the pages load faster-->
 		<script src="js/bootstrap.min.js"></script>
-
-		<!-- for Mega Menu 
-		<script src="js/for_megamenu_run_prettify.js"></script>-->
 
 		<!-- for Retina Graphics -->
 		<script type="text/javascript" src="js/retina.js"></script>

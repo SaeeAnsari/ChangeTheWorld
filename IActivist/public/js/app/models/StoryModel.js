@@ -16,12 +16,20 @@ define(["jquery", "backbone",'underscore'], function($, Backbone, Underscore) {
 	    },
         
 		// Model Constructor
-		initialize : function() {
+		initialize : function(options) {
 			this.BoxColor = Underscore.sample(this.colorChoices);
+            if(options != null || options != undefined)//for some reason its getting called with null miltiple times
+                {
+                    this.ID = options.ID;
+                }
 		},
         url: function()
         {
-            return "http://saeedansari-001-site1.ctempurl.com/api/story";
+
+            if(this.ID == null)                
+                return 'http://localhost:49520/api/story';
+            else
+                return 'http://localhost:49520/api/story/' + this.ID;
         },
         AddStory: function(){
             
