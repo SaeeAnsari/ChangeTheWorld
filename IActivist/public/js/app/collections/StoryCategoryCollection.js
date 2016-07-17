@@ -5,7 +5,9 @@ define(["jquery","backbone","models/StoryCategoryModel"],
       // Tells the Backbone Collection that all of it's models will be of type Model (listed up top as a dependency)
       model: Model,
 
+
       url: 'http://saeedansari-001-site1.ctempurl.com/api/StoryCategory',
+
      
     });
 

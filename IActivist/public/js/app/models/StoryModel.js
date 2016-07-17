@@ -25,6 +25,7 @@ define(["jquery", "backbone",'underscore'], function($, Backbone, Underscore) {
 		},
         url: function()
         {
+
             if(this.ID == null)                
                 return 'http://localhost:49520/api/story';
             else
