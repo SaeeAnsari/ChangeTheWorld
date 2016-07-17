@@ -22,6 +22,7 @@ require.config({
         "dropzonejs" : "../libs/dropzone-amd-module",
         "select2" : "../libs/select2.full.min",
         "avgrund" : "../libs/jquery.avgrund.min",
+        "backbonemodel" : "../libs/backbone.modal",
         
 
         // Plugins

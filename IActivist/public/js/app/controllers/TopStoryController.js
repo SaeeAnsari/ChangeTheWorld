@@ -19,8 +19,8 @@ define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHead
             
             App.mainRegion.show(new NewStoryView({el: '#p3-body'}));            
            
-            App.extendedSections.show(new WelcomeView());
-            App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
+            App.extendedSections.show(new WelcomeView({el : '.megafolio-container'}));
+            //App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
             
             //-- MAIN PAGE END --//
         

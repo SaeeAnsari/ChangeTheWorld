@@ -2,10 +2,15 @@ define(['App', 'backbone', 'marionette', 'underscore', 'handlebars', 'hbs!templa
 function(App, Backbone, Marionette, Underscore, Handlebars, StoryEnterCommentTemplate) {
 	//ItemView provides some default rendering logic
 	return Backbone.Marionette.ItemView.extend({
+        storyID: 0,
+        initialize: function(){
+          this.storyID = this.options.storyID;  
+        },
 		render : function() {
 			
 			var template = StoryEnterCommentTemplate;
-			$("#dvEnterComment").append(template);
+            this.$el.append(template);
+			//$("#dvEnterComment").append(template);
 		}
 	});
 });

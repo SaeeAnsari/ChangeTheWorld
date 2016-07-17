@@ -14,7 +14,9 @@
 
         <!-- Modal -->
         
-        <link href="css/CustomStyle/avgrund.css" rel="stylesheet" />
+        <link href="css/CustomStyle/backbone.modal.theme.css" rel="stylesheet" />
+        <link href="css/CustomStyle/backbone.modal.css" rel="stylesheet" />
+        
         
 			<!--My Style-->
 		
@@ -216,12 +218,32 @@
         <div id="Extended">            
             <section id="Gallery">
                 <div class="row">
-                    <input id="btnClickMe" type="button" value ="clickme" class="clickme">
+                    
                     <!-- This is where we insert the stories-->
                     <div class="container-megafolio">
                         <div class="megafolio-container">
 
                         </div>
+                                
+                        
+                        
+                        
+                        <!-- Modal Section-->
+                        <script type="text/template" id="modal-template">
+                        <div class="bbm-modal__topbar">
+                          <h3 class="bbm-modal__title">Backbone.Modal</h3>
+                        </div>
+                        <div id="StoryContentModal" class="bbm-modal__section">
+                          
+                        </div>
+                        <div class="bbm-modal__bottombar">
+                          <a href="#" class="bbm-button">close</a>
+                        </div>
+                      </script>
+                        
+                        <div class="app"></div>
+                        
+                        <!-- Modal Section End --> 
                     </div>
                     
                 </div>
@@ -242,6 +264,10 @@
                         </div>
                     </div>
                 </div>
+            </section>
+        
+            <section id="StoryModal">
+                I am Here
             </section>
         </div>
         <!--
