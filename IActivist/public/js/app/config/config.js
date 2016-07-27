@@ -23,6 +23,7 @@ require.config({
         "select2" : "../libs/select2.full.min",
         "avgrund" : "../libs/jquery.avgrund.min",
         "backbonemodel" : "../libs/backbone.modal",
+        "accordian" : "../libs/responsive_accordian/accordion",
         
 
         // Plugins
