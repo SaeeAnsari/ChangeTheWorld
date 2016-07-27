@@ -1,5 +1,5 @@
-define(['App', 'backbone', 'marionette', 'underscore', 'handlebars', 'models/Model', 'hbs!templates/StoryBoxContainer','hbs!templates/StoryBox', 'models/StoryModel', 'collections/StoryCollection','megafolio','views/StoryModalControllerView','views/StoryActionView','ThemeBunchPlugin', 'fancybox', 'backbonemodel'], 
-function(App, Backbone, Marionette, Underscore, Handlebars, Model, templateStoryBoxContainer, templateTopStory, StoryModel, StoryCollection,MegaFolio, StoryControllerView,
+define(['App', 'backbone', 'marionette', 'underscore', 'handlebars', 'models/Model', 'hbs!templates/StoryBox', 'models/StoryModel', 'collections/StoryCollection','megafolio','views/StoryModalControllerView','views/StoryActionView','ThemeBunchPlugin', 'fancybox', 'backbonemodel'], 
+function(App, Backbone, Marionette, Underscore, Handlebars, Model, templateTopStory, StoryModel, StoryCollection,MegaFolio, StoryControllerView,
          StoryActionView) {
     
     var Modal = Backbone.Modal.extend({
@@ -12,24 +12,19 @@ function(App, Backbone, Marionette, Underscore, Handlebars, Model, templateStory
 	return Backbone.Marionette.ItemView.extend({
 		template2 : templateTopStory,
 		model : new StoryModel(),
-		
-		// View Event Handlers
-		events : {
-            "click [id*='dvGridItem']" : "doPop"
-		},       
-        doPop : function(elem){
-          //alert('here');
+        StoryCategory : '',
+        initialize: function(options){
             
-            //App.modalRegion.show(new StoryControllerView({el: '#StoryModal'}));
-        
-            
-            //var id = $('#dvStoryModalMain');
-        
-        },        
-       
+        },       
 		render : function() {
              var that = this;
-			this.collection = new StoryCollection();
+            if(this.options.StoryCategory != null){
+                this.collection = new StoryCollection({storyCategory : this.options.StoryCategory});
+                
+            }               
+            else{
+                this.collection = new StoryCollection();
+            }
 
 			var template = templateTopStory;
 			

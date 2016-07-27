@@ -17,6 +17,11 @@
         <link href="css/CustomStyle/backbone.modal.theme.css" rel="stylesheet" />
         <link href="css/CustomStyle/backbone.modal.css" rel="stylesheet" />
         
+         <!-- Accordian -->
+        
+        <link href="css/CustomStyle/accordion.css" rel="stylesheet" />
+        <link href="css/CustomStyle/accordion-dark.css" rel="stylesheet" />
+        
         
 			<!--My Style-->
 		
@@ -148,9 +153,9 @@
 							"src" : "js/libs/require.js"
 						},
 						// JavaScript initialization file that is also loaded when in development mode
-						"dev-init" : "js/app/init/MobileInit.js",
+						"dev-init" : "js/app/init/LeadershipInit.js",
 						// JavaScript file that is loaded when in production mode
-						"prod-init" : "js/app/init/MobileInit.min.js",
+						"prod-init" : "js/app/init/LeadershipInit.js",
 						"prod-js" : {
 							"data-main" : "js/app/config/config.js",
 							"src" : "js/libs/require.js"
@@ -174,9 +179,9 @@
 							"src" : "js/libs/require.js"
 						},
 						// JavaScript initialization file that is loaded when in development mode
-						"dev-init" : "js/app/init/DesktopInit.js",
+						"dev-init" : "js/app/init/LeadershipInit.js",
 						// JavaScript file that is loaded when in production mode
-						"prod-init" : "js/app/init/DesktopInit.js",
+						"prod-init" : "js/app/init/LeadershipInit.js",
 						"prod-js" : {
 							"data-main" : "js/app/config/config.js",
 							"src" : "js/libs/require.js"
@@ -208,7 +213,8 @@
         
         <section id="Content">
             <section id="banner-text"  class="removeMobile"></section>
-           <section id="p3-body"></section>            
+            <section id="p3-body"></section>   
+            <section id="p4-body"></section>   
         </section>
         
         <section id="StoryContent">
@@ -224,9 +230,6 @@
                         <div class="megafolio-container">
 
                         </div>
-                                
-                        
-                        
                         
                         <!-- Modal Section-->
                         <script type="text/template" id="modal-template">
@@ -256,8 +259,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="messages-body">
-                       
-                                <a href="#"><i class="fa fa-pencil-square-o"></i></a>
+                                <i class="fa fa-pencil-square-o fa-3x"></i>
                                 <a href="#"><i class="fa fa-search"></i></a>
                                 <a href="#"><i class="fa fa-comments"></i></i></a>
                                 <a href="#"><i class="fa fa-bell-o"></i></a>
@@ -267,9 +269,7 @@
                 </div>
             </section>
         
-            <section id="StoryModal">
-                I am Here
-            </section>
+          
         </div>
         <!--
 		##############################
