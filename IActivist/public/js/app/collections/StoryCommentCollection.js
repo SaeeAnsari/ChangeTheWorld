@@ -10,7 +10,7 @@ define(["jquery","backbone","models/StoryCommentModel"],
                 this.url +=  '?storyID=' + storyID;
            }
         },
-        url: 'http://localhost:49520/api/Comment',
+        url: 'http://saeedansari-001-site1.ctempurl.com/api/Comment',
     });
 
     return Collection;

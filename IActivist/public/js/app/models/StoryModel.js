@@ -27,9 +27,9 @@ define(["jquery", "backbone",'underscore'], function($, Backbone, Underscore) {
         {
 
             if(this.ID == null)                
-                return 'http://localhost:49520/api/story';
+                return 'http://saeedansari-001-site1.ctempurl.com/api/story';
             else
-                return 'http://localhost:49520/api/story/' + this.ID;
+                return 'http://saeedansari-001-site1.ctempurl.com/api/story/' + this.ID;
         },
         AddStory: function(){
             

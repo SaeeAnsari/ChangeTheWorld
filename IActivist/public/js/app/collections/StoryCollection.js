@@ -8,7 +8,7 @@ define(["jquery","backbone","models/StoryModel"],
             this.url = this.url + '?StoryCategory=' + options.storyCategory;
         },       
 
-      url: 'http://localhost:49520/api/story',//'http://saeedansari-001-site1.ctempurl.com/api/story',
+      url: 'http://saeedansari-001-site1.ctempurl.com/api/story',
      
     });
 
