@@ -12,7 +12,7 @@
   padding: 0 30px; }
 
 .bbm-modal__topbar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  <!--border-bottom: 1px solid rgba(0, 0, 0, 0.1);-->
   margin-bottom: 30px; }
   .bbm-modal__topbar > ul {
     list-style: none;
@@ -59,7 +59,7 @@
     line-height: 1em; }
 
 .bbm-modal__bottombar {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  <!--border-top: 1px solid rgba(0, 0, 0, 0.1);-->
   padding: 18px;
   text-align: right;
   margin-top: 30px; }

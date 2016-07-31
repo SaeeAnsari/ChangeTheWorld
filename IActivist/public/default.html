@@ -133,35 +133,7 @@
 					}
 				};
 
-				// Mobile/Tablet Logic
-				if ((/iPhone|iPod|iPad|Android|BlackBerry|Opera Mini|IEMobile/).test(ua)) {
-
-					// Mobile/Tablet CSS and JavaScript files to load
-					filesToLoad = {
-						// CSS file that is loaded when in development mode
-						"dev-css" : "css/mobile.css",
-						// CSS file that is loaded when in production mode
-						"prod-css" : "css/mobile.min.css",
-						// Require.js configuration file that is loaded when in development mode
-						"dev-js" : {
-							"data-main" : "js/app/config/config.js",
-							"src" : "js/libs/require.js"
-						},
-						// JavaScript initialization file that is also loaded when in development mode
-						"dev-init" : "js/app/init/MobileInit.js",
-						// JavaScript file that is loaded when in production mode
-						"prod-init" : "js/app/init/MobileInit.min.js",
-						"prod-js" : {
-							"data-main" : "js/app/config/config.js",
-							"src" : "js/libs/require.js"
-						}
-					};
-
-				}
-
-				// Desktop Logic
-				else {
-
+				
 					// Desktop CSS and JavaScript files to load
 					filesToLoad = {
 						// CSS file that is loaded when in development mode
@@ -183,7 +155,7 @@
 						}
 					};
 
-				}
+				
 
 				boilerplateMVC.loadFiles(production, filesToLoad, function() {
 					if (!production && window.require) {
@@ -194,6 +166,10 @@
 				});
 
 			})(navigator.userAgent || navigator.vendor || window.opera, window, document);
+            
+             window.onerror = function (errorMsg, url, lineNumber) {
+                alert('Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber);
+             }
 
 		</script>
     
@@ -237,7 +213,7 @@
                           
                         </div>
                         <div class="bbm-modal__bottombar">
-                          <a href="#" class="bbm-button">close</a>
+                          <a href="#" class="bbm-button" style="display:none;">close</a>
                         </div>
                       </script>
                         
@@ -251,21 +227,10 @@
             
             <section id="Video"></section>
             
-            <section id="messages">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="messages-body">
-                       
-                                <a href="#"><i class="fa fa-pencil-square-o"></i></a>
-                                <a href="#"><i class="fa fa-search"></i></a>
-                                <a href="#"><i class="fa fa-comments"></i></i></a>
-                                <a href="#"><i class="fa fa-bell-o"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <section id="footerSection">
+                <div class="footerBase"></div>
             </section>
+          
         
             <section id="StoryModal">
                 I am Here
@@ -293,6 +258,9 @@
 		// WOW Activation
 		new WOW().init();
 		
+       
+
+        
 	</script>
 	</body>
 </html>

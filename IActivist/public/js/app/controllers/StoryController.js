@@ -7,25 +7,7 @@ define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHead
         },
         //gets mapped to in AppRouter's appRoutes
         index:function () {
-        	//var view = new WelcomeView({el:'#main'});
-        	//var viewNew = new NewStoryView({el: '.newStorySection'});
         	
-        	/*
-        	//view.render();
-        	
-            //-- MAIN PAGE --//
-            App.headerRegion.show(new TopBarView());
-            App.headerRegion.show(new TopHeaderView({el: '.topHeaderSection'}));            
-            App.headerRegion.show(new HeaderBelowView({el: '#banner-text'}));    
-            
-            App.mainRegion.show(new NewStoryView({el: '#p3-body'}));            
-           
-            App.extendedSections.show(new WelcomeView());
-            App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
-            
-            //-- MAIN PAGE END --//
-        
-             */
             var storyMasterContainer = new StoryMasterView()
             App.mainRegion.show(storyMasterContainer);        
            

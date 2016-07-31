@@ -1,5 +1,5 @@
-define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView', 'views/HeaderBelowView','views/TopHeaderView', 'views/TopBarView', 'views/FeaturedVideoView','views/StoryViewMasterView'],
-    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView, HeaderBelowView, TopHeaderView, TopBarView, FeaturedVideoView ,StoryMasterView) {
+define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHeaderView', 'models/StoryModel', 'views/NewStoryView', 'views/HeaderBelowView','views/TopHeaderView', 'views/TopBarView', 'views/FeaturedVideoView','views/StoryViewMasterView', 'views/Actions/FooterBarView'],
+    function (App, Backbone, Marionette, WelcomeView, DesktopHeaderView, StoryModel, NewStoryView, HeaderBelowView, TopHeaderView, TopBarView, FeaturedVideoView ,StoryMasterView, FooterBarView) {
     return Backbone.Marionette.Controller.extend({
         initialize:function (options) {
             //App.headerRegion.show(new DesktopHeaderView());
@@ -20,6 +20,8 @@ define(['App', 'backbone', 'marionette', 'views/WelcomeView', 'views/DesktopHead
             App.mainRegion.show(new NewStoryView({el: '#p3-body'}));            
            
             App.extendedSections.show(new WelcomeView({el : '.megafolio-container', StoryCategory: ''}));
+            
+            App.footerRegion.show(new FooterBarView({el: '.footerBase'}));
             //App.extendedSections.show(new FeaturedVideoView({el: '#Video'}));
             
             //-- MAIN PAGE END --//
